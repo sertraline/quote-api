@@ -210,7 +210,7 @@ module.exports = async (parm) => {
 
     // write text button right
     canvasPicCtx.fillStyle = `rgba(0, 0, 0, 0.3)`
-    canvasPicCtx.font = `${8 * parm.scale}px Noto Sans`
+    canvasPicCtx.font = `${8 * parm.scale}px Open Sans`
     canvasPicCtx.textAlign = 'right'
     canvasPicCtx.fillText('@QuotLyBot', canvasPic.width - 25, canvasPic.height - 25)
 
@@ -280,7 +280,7 @@ module.exports = async (parm) => {
 
     // write text vertical left center text
     canvasPicCtx.fillStyle = `rgba(0, 0, 0, 0.4)`
-    canvasPicCtx.font = `${16 * parm.scale}px Noto Sans`
+    canvasPicCtx.font = `${16 * parm.scale}px Open Sans`
     canvasPicCtx.textAlign = 'center'
     canvasPicCtx.translate(70, canvasPic.height / 2)
     canvasPicCtx.rotate(-Math.PI / 2)
