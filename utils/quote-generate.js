@@ -474,7 +474,7 @@ class QuoteGenerate {
       }
 
       let fontType = ''
-      let fontName = 'OpenSans'
+      let fontName = 'NotoSans'
       let fillStyle = fontColor
 
       if (styledWord.style.includes('bold')) {
@@ -484,7 +484,7 @@ class QuoteGenerate {
         fontType += 'italic '
       }
       if (styledWord.style.includes('monospace')) {
-        fontName = 'OpenSansMono'
+        fontName = 'NotoSansMono'
         fillStyle = '#5887a7'
       }
       if (styledWord.style.includes('mention')) {
