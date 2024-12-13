@@ -1,10 +1,12 @@
-FROM node:20-alpine3.16
+FROM node:20-bookworm
 
 WORKDIR /app
 ADD . /app
 
-RUN apk add --no-cache font-noto font-noto-cjk font-noto-extra gcompat libstdc++ libuuid vips-dev build-base jpeg-dev pango-dev cairo-dev imagemagick libssl1.1
-RUN ln -s /lib/libresolv.so.2 /usr/lib/libresolv.so.2
+RUN apt update
+RUN apt install -y fonts-open-sans build-essential libcairo2 libcairo2-dev imagemagick
+RUN ln -s ~/openssl/lib/libcrypto.so.1.1 /lib/libcrypto.so.1.1
+
 RUN npm install
 
 CMD ["index.js"]
